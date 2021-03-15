@@ -1,0 +1,107 @@
+:root {     /*declarando variáveis, que serão usadas várias vezes*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {     /*resetando o CSS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* limita os elementos dentro da borda da caixa, não ultrapassa*/
+}
+
+/* elementos base*/
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;   /*alinha os elementos em tela, alinha em linha*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  /*cria espaços entre as primeiras tags, na horizontal*/
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {   /*vai fazer mudar de cor quando passar o mouse em cima*/
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url("../img/chicago_pd.jpg");
+
+    height: 400px;
+    background-size: cover;  /*especificar o tamanho da imagem, vai pegar a area de cobertura da caixa total*/
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;  /*sempre segue a direção do flex-direction*/
+    align-items: flex-start;  /*sempre da esquerda para direita*/
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;  /*tirando os valores padrões da borda*/
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px; /*espaçamento entre os botões*/
+    font-size: 12px;
+
+    cursor: pointer;  /*quando passar o mouse muda o mouse*/
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+/* # WRAPPER = ENVELOPAR (container) */
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
